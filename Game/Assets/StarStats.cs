@@ -3,6 +3,8 @@ using System.Collections;
 
 public class StarStats : MonoBehaviour {
 
+	public float mass;
+
 	// Use this for initialization
 	void Start () {
 	
