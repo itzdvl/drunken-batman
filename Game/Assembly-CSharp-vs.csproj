@@ -46,8 +46,10 @@
   <ItemGroup>
      <Compile Include="Assets\Database.cs" />
      <Compile Include="Assets\Demo.cs" />
+     <Compile Include="Assets\DrawPath.cs" />
      <Compile Include="Assets\GeneratePaths.cs" />
      <Compile Include="Assets\Generator.cs" />
+     <Compile Include="Assets\NoClipper.cs" />
      <Compile Include="Assets\Physics.cs" />
      <Compile Include="Assets\PlanetStats.cs" />
      <Compile Include="Assets\PlayerScript.cs" />
