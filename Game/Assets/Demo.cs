@@ -14,15 +14,15 @@ public class Demo : MonoBehaviour {
 	private float[] zR;
 	private float[] offset;
 	private int SCALE = 100;
-	private int time = 1;
+	private int time = 10;
 
 
 	private GameObject star;
 	private GameObject[] planets;
 	private GameObject[] paths;
 
-	// Use this for initialization
 	void Start () {
+		UnityEngine.Random.seed = 123;
 		loadDatabase ();
 
 		star = createStar ();
@@ -43,7 +43,7 @@ public class Demo : MonoBehaviour {
 		star.transform.Rotate ((float)(0.05),(float)(0.05),(float)(0.05));
 		for (int i = 0; i < planets.Length; i++) {
 			planets[i].transform.position = new Vector3((int) (xR[i]*System.Math.Cos(offset[i]+Time.frameCount*time/5000.0)), 0,(int) (zR[i]*System.Math.Sin(offset[i]+Time.frameCount*time/5000.0)));
-			float rotationMultiplier = (((float)(100-(System.Math.Sqrt(System.Math.Pow(xR [i],2)+System.Math.Pow(zR [i],2)) / 100.0))) * 20)/5000*time;
+			float rotationMultiplier = (float)(UnityEngine.Random.value)/2*time;
 			planets[i].transform.RotateAround (planets[i].transform.position, planets[i].transform.up, rotationMultiplier);
 		}
 
